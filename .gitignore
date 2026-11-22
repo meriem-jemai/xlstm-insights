@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+wandb/
+# model checkpoints (too large for git)
+*.pt
+# generated / downloaded datasets
+experiments/data/copy_*.txt
+experiments/data/dyck_*.txt
+experiments/data/python_code.txt
+pytorch_implementations/copy_train.txt
+pytorch_implementations/dyck_train.txt
+experiments/introspection/results/
