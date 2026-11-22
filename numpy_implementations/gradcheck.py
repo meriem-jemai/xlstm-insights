@@ -56,7 +56,9 @@ def main():
         ok &= check(f"sLSTM ({heads} heads)", slstm, params,
                     random_state(slstm, hidden, rng), inputs, targets)
     print("\nAll gradients correct." if ok else "\nSome gradients are wrong.")
+    raise SystemExit(0 if ok else 1)  # n: error code for CI, so a failed check turns the badge red
 
 
 if __name__ == "__main__":
     main()
+

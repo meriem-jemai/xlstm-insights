@@ -1,0 +1,27 @@
+﻿name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install NumPy
+        run: pip install numpy
+      - name: NumPy gradient check
+        working-directory: numpy_implementations
+        run: python gradcheck.py
+
+      - name: Install PyTorch (CPU)
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: PyTorch model tests
+        working-directory: pytorch_implementations
+        run: python test_models.py

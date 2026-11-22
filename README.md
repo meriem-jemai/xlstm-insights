@@ -1,4 +1,6 @@
-# xLSTM: Insights into Memory and Gating Dynamics
+﻿# xLSTM: Insights into Memory and Gating Dynamics
+
+![tests](https://github.com/meriem-jemai/xlstm-insights/actions/workflows/tests.yml/badge.svg)
 
 Code for my bachelor thesis at **TU Dortmund** (LS8, Department of Computer Science),
 supervised by Prof. Dr. Stefan Harmeling and Marc Höftmann.

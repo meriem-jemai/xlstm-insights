@@ -109,3 +109,5 @@ if __name__ == "__main__":
         test_models_train_step(),
     ]
     print("\nAll tests passed." if all(results) else "\nSome tests failed.")
+    raise SystemExit(0 if all(results) else 1)  # n: error code for CI, so a failed test turns the badge red
+
